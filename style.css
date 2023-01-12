@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Press+Start+2P&display=swap');
+
+
+/* Color Pallete: #000000 #323232 #FF1E56  #FFAC41  */
+/* Font used: font-family: 'Play', sans-serif;
+font-family: 'Press Start 2P', cursive; */
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #323232; 
+    box-sizing: border-box;
+}
+
+h1{
+    text-shadow: 
+        -0.75px 0.75px 0 #FF1E56,
+        0.75px 0.75px 0 #FF1E56,
+        0.75px -0.75px 0 #FF1E56,
+        -0.75px -0.75px 0 #FF1E56;
+        padding: 15px 34px;
+        /* font-family: 'Play', sans-serif; */
+        font-family: 'Press Start 2P', cursive;
+        font-size: 3rem;
+        justify-content: center;
+        text-align: center;
+        margin: 20px auto;
+        margin-bottom: 50px;
+}
+
+/* Navigation Bar */
+
+nav ul{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+nav ul li{
+    list-style: none;
+    padding: 15px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #FF1E56;
+    font-size: 1.3rem;
+    font-family: 'Press Start 2P', cursive; 
+    line-height: 50px;
+}
+
+.gif{
+    width: 75px;
+    margin-left: 10px;
+}
+
+
+/* Tic Tac Toe container */
+
+.gameContainer{
+    /* background-color: #FFAC41; */
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    font-family: 'Play', sans-serif;
+    position: relative;
+}
+
+.box{
+    border: 3px solid black;
+    font-size: 9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+} 
+
+.box:hover{
+    border: 3px solid #FF1E56;
+    background-color: #777676;
+}
+
+
+.info{
+    font-size: 0.8rem;
+}
+
+.reset{
+    justify-content: center;
+    text-align: center;
+    margin: 20px auto;
+    margin-top: 70px;
+}
+
+#reset{
+    padding: 10px 25px;
+    font-family: 'Play', sans-serif;
+    font-size: 2rem;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+    background-color: black;
+    color: #FF1E56;
+    font-weight:bolder;
+    border: 2px solid #FF1E56;
+    border-radius: 10px;
+}
+
+#reset:hover{
+    background-color: #FF1E56;
+    color: black;
+    border: 5px solid black;
+}
+
+
+.imgBox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.br-0{
+    border-right: 0;
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+.right-bottom{
+    box-shadow:  5px 5px rgba(255, 30, 86,1);
+}
+.left{
+    box-shadow: 5px 0 0 0 rgba(255, 30, 86,1);
+
+}
+.bottom{
+   box-shadow:  0 5px 0px 0px rgba(255, 30, 86,1);
+}
+
+.inffo h1{
+    font-size: 3rem;
+    color: #FF1E56;
+    text-shadow: 
+    -1px 1px 0 black,
+    1px 1px 0 black,
+    1px -1px 0 black,
+    1px -1px 0 black;
+    font-family: 'Play', sans-serif;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 600px)
+{
+    nav ul li a{
+        font-size: 0.8rem;
+    }
+    .gif{
+        width: 50px;
+    }
+    h1{
+        font-size: 0.9rem!important;
+        text-shadow: 
+        -0.5px 0.5px 0 #FF1E56,
+        0.5px 0.5px 0 #FF1E56,
+        0.5px -0.5px 0 #FF1E56,
+        -0.5px -0.5px 0 #FF1E56;
+    }
+
+
+}
+
+@media screen and (max-width: 1300px)
+{
+    h1{
+        font-size: 1.5rem;
+    }
+
+    #reset{
+        padding: 5px 10px;
+        font-size: 1rem;
+        margin-bottom: 50px;
+    }
+
+    .inffo h1{
+        font-size: 1.5rem;
+    }
+  
+}
+
+@media screen and (max-width: 300px)
+{
+    nav ul li a{
+        font-size: 0.5rem;
+    }
+    h1{
+        font-size: 0.65rem!important;
+        padding: 5px!important;
+    }
+
+    #reset{
+        padding: 5px 10px;
+        font-size: 1rem;
+        margin-bottom: 50px;
+    }
+  
+}
+
